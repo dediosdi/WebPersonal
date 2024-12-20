@@ -159,6 +159,11 @@ section#hero h1 {
     transition: color 0.3s ease;
 }
 
+section#hero logomain {
+    height: 2px;
+    
+}
+
 section#hero h1:hover {
     color: white; /* Cambiar el color a blanco al pasar el cursor */
 }
