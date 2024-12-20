@@ -1,0 +1,314 @@
+font-face {
+    font-family: 'Touche Light';
+    src: url('font/ToucheLight.ttf') format('truetype');
+}
+/* General Styles */
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+body {
+    font-family: 'Touche Light', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #000000, #434343);
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-weight: lighter;
+}
+.btn.btn-primary.mr-2 {
+    background-color: purple;
+    border-color: purple;
+}
+
+.btn.btn-primary.mr-2:hover {
+    background-color: darkviolet;
+    border-color: darkviolet;
+}
+
+.btn.btn-secondary {
+    background-color: #007bff; /* Color azul */
+    border-color: #007bff;
+}
+
+.btn.btn-secondary:hover {
+    background-color: #0056b3; /* Color azul más oscuro */
+    border-color: #0056b3;
+}
+
+.btn.btn-github {
+    background-color: white; /* Fondo blanco */
+    border-color: white;
+    color: black; /* Texto negro */
+}
+
+.btn.btn-github:hover {
+    background-color: #e0e0e0; /* Fondo gris claro al pasar el cursor */
+    border-color: #e0e0e0;
+    color: black; /* Texto negro */
+}
+
+/* Estilos para el header, secciones y footer */
+header, section, footer {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: none; /* Eliminar bordes */
+    background-color: transparent; /* Hacer transparentes las cajas principales */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: justify;
+}
+
+header {
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    margin: 0;     /* Elimina márgenes por si los hay */
+    padding: 0;    /* Elimina relleno por si lo tiene */
+    display: flex; /* Opcional: para centrar contenido dentro */
+    justify-content: center; /* Centra contenido horizontalmente */
+    align-items: center;     /* Centra contenido verticalmente */
+    background-color: #333;  /* Cambiá el color de fondo a tu gusto */
+    color: #fff;   /* Cambiá el color del texto a tu gusto */
+  }
+
+header .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* Añadir padding interno */
+}
+
+header .navbar-brand {
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .navbar-brand .logo {
+    height: 90px; /* Ajustar el tamaño del logo */
+    transition: filter 0.3s ease;
+}
+
+header .navbar-brand:hover .logo {
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg); /* Cambiar el color del logo a azul */
+}
+
+header .nav-link {
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    color: white; /* Color del texto blanco para mejor visibilidad */
+    padding: 10px 20px; /* Añadir padding para mejor interacción */
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+}
+
+header .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #007bff; /* Color azul */
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+header .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    background: purple; /* Color azul */
+}
+
+header .nav-link:hover {
+    color: purple; /* Color azul */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente al pasar el cursor */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos para las secciones */
+section {
+    padding: 100px 20px; /* Añadir padding para espacio */
+    margin-top: 60px; /* Espacio para el header fijo */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+section h1 {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: #007bff; /* Color azul */
+    text-align: center;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+section#hero h1 {
+    transition: color 0.3s ease;
+}
+
+section#hero h1:hover {
+    color: white; /* Cambiar el color a blanco al pasar el cursor */
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+section h2:hover {
+    color: #01458d; /* Color azul más oscuro */
+}
+
+
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background: #007bff; /* Color azul */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+section h2:hover::after {
+    width: 100px;
+    background: #0056b3; /* Color azul más oscuro */
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+section p:hover {
+    color: #48ff009a; /* Color verde */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: #007bff; /* Color azul */
+}
+
+footer .logo {
+    height: 90px; /* Ajustar el tamaño del logo en el footer */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #007bff; /* Color azul */
+}
+
+/* Estilos para las cartas de proyectos */
+.card {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente */
+    border: none; /* Eliminar bordes */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-title {
+    color: #007bff; /* Color azul */
+    text-align: center;
+}
+
+.card-text {
+    color: #f5f5f5; /* Color del texto claro */
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section, footer {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    header .nav-link {
+        padding: 10px;
+        margin: 0 5px;
+    }
+
+    section {
+        padding: 80px 10px;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
